@@ -1,0 +1,15 @@
+button {
+    width: 200px;
+    font-size: 15px;
+    margin: 8px;
+    padding: 3px;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+}
+
+#bungkus {
+    text-align: center;
+}
