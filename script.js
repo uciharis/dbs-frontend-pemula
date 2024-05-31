@@ -1,3 +1,10 @@
+// -------------- tes prompt, alert -------
+/*
+let pesanku = 'halo';
+prompt(pesanku);
+alert(pesanku);
+*/
+
 // --- merubah dimensi gambar ---
 
 let gambar = document.getElementById('gambar');
