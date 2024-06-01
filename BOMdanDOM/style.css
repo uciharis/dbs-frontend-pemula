@@ -13,3 +13,8 @@ img {
 #bungkus {
     text-align: center;
 }
+
+hr {
+    width: 95%;
+    border: .1rem dashed yellowgreen;
+}

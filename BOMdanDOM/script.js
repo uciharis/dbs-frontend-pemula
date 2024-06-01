@@ -1,8 +1,20 @@
-// -------------- tes prompt, alert -------
+// -------------- tes prompt, alert (bagian dari Browser obj model -------
 /*
-let pesanku = 'halo';
-prompt(pesanku);
 alert(pesanku);
+let hasil=(prompt('pesanku','asu lo le '));
+console.log(hasil)
+console.info(hasil)
+console.warn(hasil)
+console.error(hasil)
+
+----------objek browser (window) bersifat global -------------
+function alert(something){
+    console.log('hati hati '+ something)
+}
+alert('kontolodon')
+
+window.alert('asuik')
+
 */
 
 // --- merubah dimensi gambar ---
