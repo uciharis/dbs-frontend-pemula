@@ -1,0 +1,12 @@
+.content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid sandybrown;
+}
+
+#tambahButton {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
