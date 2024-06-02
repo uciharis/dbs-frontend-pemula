@@ -13,7 +13,7 @@ function adding(){
         let hiddenMessage = document.createElement('h3');
         hiddenMessage.innerText = 'selamat anda menemukan hadiah! ';
         let gambarHidden = document.createElement('img');
-        gambarHidden.setAttribute('src',https://i.ibb.co/0V49VRZ/catto.jpg');
+        gambarHidden.setAttribute('src','kitten.jpeg');
         let kontent = document.querySelector('.content');
         kontent.appendChild(hiddenMessage).appendChild(gambarHidden);
     }
