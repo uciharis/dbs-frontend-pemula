@@ -3,7 +3,11 @@ function welcome(){
     let kontent = document.querySelector('.content');
     kontent.removeAttribute('hidden');
 }
-document.body.onload = welcome;
+// document.body.onload = welcome;
+// even diatas tanpa eventListener
+
+// contoh menggunakan eventListener
+window.addEventListener('load', welcome);
 
 function adding(){
     let konter = document.getElementById('counter');
@@ -18,4 +22,8 @@ function adding(){
         kontent.appendChild(hiddenMessage).appendChild(gambarHidden);
     }
 }
-document.getElementById('tambahButton').onclick = adding;
+// document.getElementById('tambahButton').onclick = adding;
+// event tanpa eventListener
+
+// menggunakan eventListener
+document.getElementById('tambahButton').addEventListener('click',adding);
