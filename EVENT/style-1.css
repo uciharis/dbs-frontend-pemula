@@ -1,0 +1,12 @@
+.buttons {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border: 2px solid blueviolet;
+}
+
+.button {
+    margin: 8px;
+    height: 40px;
+}
