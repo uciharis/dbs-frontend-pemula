@@ -4,6 +4,8 @@ top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
 border: 2px solid blueviolet;
+margin: 2px;
+padding: 5px;
 }
 
 .button {
