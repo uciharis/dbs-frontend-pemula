@@ -7,6 +7,6 @@ submitAction.addEventListener('submit', function(event){
     let hiddenMessage = `halo, ${inputNama}. bagaimana kondisi di ${inputDomisili}?`
 
     document.getElementById('messageAfterSubmit').innerText = hiddenMessage;
-    event.preventDefault;
+    event.preventDefault();
 
 });
