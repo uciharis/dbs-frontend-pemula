@@ -1,0 +1,12 @@
+h2 {
+text-align: center;
+}
+
+.contents {
+border: 1px solid black;
+padding: 15px;
+top: 50%;
+left: 50%;
+position: fixed;
+transform: translate(-50%,-50%);
+}
