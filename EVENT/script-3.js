@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
         let jumlahKarakterMaksimal = document.getElementById('inputNama').maxLength;
 
         console.log('jumlah char diketik: ', jumlahKarakterDiketik);
-        console.log('jumlah char Maks: ', jumlahKarakterDiketik);
+        console.log('jumlah char Maks: ', jumlahKarakterMaksimal);
         let sisaKarakterUpdate = jumlahKarakterMaksimal-jumlahKarakterDiketik;
         document.getElementById('sisaKarakter').innerText = sisaKarakterUpdate.toString();
 
