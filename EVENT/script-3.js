@@ -40,12 +40,15 @@ document.addEventListener('DOMContentLoaded', function(){
         let submitButtonStatus = document.getElementById('submitButton');
 
         if (inputCaptcha === 'PRNU' || inputCaptcha === 'prnu') {
+            alert('captcha anda masukkan sudah benar');
             submitButtonStatus.removeAttribute('disabled');
             console.log('submit enabled');
         } else {
+            alert('captcha anda masukkan masih salah')
             submitButtonStatus.setAttribute('disabled','');
             console.log('submit disabled');
         }
+        event.preventDefault();
     });
-    
+
 });
