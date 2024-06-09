@@ -80,6 +80,6 @@ input[type=text], input[type=date] {
     color: aliceblue;
 }
 
-input[type=text],input[type=date], .btn-submit:focus{
-    outline: none;
+input[type=text]:focus ,input[type=date]:focus , .btn-submit:focus{
+    outline: 4px solid yellow;
 }
