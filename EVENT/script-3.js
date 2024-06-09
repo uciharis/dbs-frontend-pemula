@@ -51,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function(){
         event.preventDefault();
     });
 document.getElementById('inputCopy').addEventListener('copy', function(){
-    alert('anda mencopy sesuatu ..');
+    alert('anda men-copy sesuatu ...');
 });
+
+document.getElementById('inputPaste').addEventListener('paste', function(){
+    alert('anda mem-paste sesuatu ...');
+})
 });
