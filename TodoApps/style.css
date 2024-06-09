@@ -83,3 +83,11 @@ input[type=text], input[type=date] {
 input[type=text]:focus ,input[type=date]:focus , .btn-submit:focus{
     outline: 4px solid yellow;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.form-title {
+    margin: auto 0;
+}
