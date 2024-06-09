@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         event.preventDefault();
     });
-document.getElementById('inputCopy')addEventListener('copy', function(){
+document.getElementById('inputCopy').addEventListener('copy', function(){
     alert('anda mencopy sesuatu ..');
 });
 });
