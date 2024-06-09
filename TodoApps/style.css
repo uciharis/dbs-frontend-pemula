@@ -11,5 +11,42 @@ html,body {
 }
 
 header {
-    background: ;
+    background: #422592;
+    padding: 16px;
+    color: whitesmoke;
+}
+
+.wrapper {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.wrapper .container {
+    width: 1024px;
+    border-radius: 8px;
+    margin: 16px;
+    background: #f8f9fa;
+    padding: 16px;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.shadow {
+    /* box-shadow: 0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2); */
+    box-shadow: 0 5px 10px rgba(241, 238, 237, 0), 0 15px 40px rgba(166,173,201,0.2);
+
 }
