@@ -22,18 +22,44 @@ header {
     flex-direction: column;
     align-items: center;
 
-}
+    }
 
-.wrapper .container {
-    width: 1024px;
-    border-radius: 8px;
-    margin: 16px;
-    background: #f8f9fa;
+    .wrapper .container {
+        width: 1024px;
+        border-radius: 8px;
+        margin: 16px;
+        background: #f8f9fa;
+        padding: 16px;
+        flex-grow: 1;
+        height: fit-content;
+        }
+/* ini kelas yang tidak ada di index.html tetapi ada di css template */
+        .item {
+
+            border-radius: 16px;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .item> .inner h2 {
+            margin-bottom: unset;
+        }
+
+        .item> .inner p {
+            margin-top: 5px;
+        }
+/* batas style unused */
+
+.form {
+    display: flex;
     padding: 16px;
-    flex-grow: 1;
-    height: fit-content;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 16px;
 }
-
 .form-group {
     display: flex;
     flex-direction: column;
@@ -90,4 +116,12 @@ input[type=text]:focus ,input[type=date]:focus , .btn-submit:focus{
 
 .form-title {
     margin: auto 0;
+}
+
+/* ini kelas yang tidak ada di index.html tetapi ada di css template */
+.check-button {
+    width: 40px;
+    height: 40px;
+
+    background: url();
 }
