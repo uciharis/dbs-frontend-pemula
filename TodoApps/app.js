@@ -18,3 +18,25 @@ function addTodo(){
     document.dispatchEvent(new Event(RENDER_EVENT));
 
 }
+
+/* struktur data :
+    {
+    id: 'string',
+    task: 'string',
+    timestamp: 'string',
+    isComplete: 'boolean'
+    };
+    */
+
+function generateId(){
+    return +new Date();
+};
+
+function generateTodoObject(id, task, timestamp, isComplete){
+    return {
+        id,
+        task,
+        timestamp,
+        isComplete
+    }
+};
