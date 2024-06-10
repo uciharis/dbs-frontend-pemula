@@ -8,5 +8,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function addTodo(){
     let textTodo = document.getElementById('title').value;
-    
+    let timeStamp = document.getElementById('date').value;
+
+    let generateID = generateId();
+
+    let todoObject = generateToDoObject(generateID, textTodo, timeStamp, false);
+    todos.push(todoObject);
+
+    document.dispatchEvent(new Event(RENDER_EVENT));
+
 }
