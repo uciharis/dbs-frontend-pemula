@@ -123,5 +123,65 @@ input[type=text]:focus ,input[type=date]:focus , .btn-submit:focus{
     width: 40px;
     height: 40px;
 
-    background: url();
+    background: url('/TodoApps/assets/check-outline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('/TodoApps/assets/check-solid.svg');
+    background-size: contain;
+}
+
+.trash-button {
+    width: 40px;
+    height: 40px;
+    background: url('/TodoApps/assets/trash-outline.svg');
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    background: url('/TodoApps/assets/trash-fill.svg');
+    background-size: contain;
+}
+
+.undo-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/undo-ouline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('../assets/undo-ouline.svg');
+    background-size: contain;
+}
+
+.check-button:focus, .trash-button {
+    outline: none;
+}
+
+/* batas unused style ke-2 */
+
+@media only screen and (max-width: 1024px){
+    .wrapper {
+        margin: 0px;
+    }
+    .wrapper .container {
+        width: 100%;
+    }
+    .list-item {
+        width: 90%;
+    }
+    .form {
+        width: 100%;
+    }
 }
