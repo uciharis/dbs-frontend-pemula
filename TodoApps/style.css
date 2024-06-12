@@ -25,22 +25,20 @@ header {
 
 .wrapper .container {
     width: 1024px;
-    height: fit-content;
-
     border-radius: 8px;
-    background: #F8F9FA;
     margin: 16px;
+    background: #F8F9FA;
     padding: 16px;
     flex-grow: 1;
+    height: fit-content;
 }
 
 .item {
-    display: flex;
-
-    background: white;
     border-radius: 16px;
     margin-top: 16px;
     padding: 12px 24px 12px 24px;
+    background: white;
+    display: flex;
     align-items: center;
 }
 
@@ -53,11 +51,10 @@ header {
 }
 
 .form {
-    height: 300px;
     display: flex;
-    flex-direction: column;
-
     padding: 16px;
+    flex-direction: column;
+    height: 300px;
     border-radius: 16px;
 }
 
@@ -89,15 +86,13 @@ input[type=text], input[type=date] {
 
 .btn-submit {
     width: fit-content;
-
+    font-family: Raleway, sans-serif;
     border-radius: 16px;
-    margin-top: auto;
     padding: 12px 24px;
     border: 2px solid #5F30E2;
-
-    font-family: Raleway, sans-serif;
     color: black;
     font-size: 24px;
+    margin-top: auto;
     align-self: flex-end;
     cursor: pointer;
 }
@@ -111,6 +106,7 @@ input[type=text], input[type=date], .btn-submit:focus {
     outline: none;
 }
 
+
 .text-center {
     text-align: center;
 }
@@ -120,11 +116,10 @@ input[type=text], input[type=date], .btn-submit:focus {
 }
 
 .check-button {
-    width: 40px;
-    height: 40px;
-
     background: url('../assets/check-outline.svg');
     background-size: contain;
+    width: 40px;
+    height: 40px;
     margin-left: auto;
     cursor: pointer;
     border: none;
@@ -136,11 +131,10 @@ input[type=text], input[type=date], .btn-submit:focus {
 }
 
 .trash-button {
-    width: 40px;
-    height: 40px;
-
     background: url('../assets/trash-outline.svg');
     background-size: contain;
+    width: 40px;
+    height: 40px;
     margin-left: 16px;
     cursor: pointer;
     border: none;
@@ -152,11 +146,10 @@ input[type=text], input[type=date], .btn-submit:focus {
 }
 
 .undo-button {
-    width: 40px;
-    height: 40px;
-
     background: url('../assets/undo-ouline.svg');
     background-size: contain;
+    width: 40px;
+    height: 40px;
     margin-left: auto;
     cursor: pointer;
     border: none;
