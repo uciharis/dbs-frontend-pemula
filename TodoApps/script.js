@@ -114,19 +114,19 @@ function removeTaskFromCompleted(todoId /* HTMLELement */) {
   todos.splice(todoTarget, 1);
 
   document.dispatchEvent(new Event(RENDER_EVENT));
-}
+  }
 
-function undoTaskFromCompleted(todoId /* HTMLELement */) {
-  const todoTarget = findTodo(todoId);
-  if (todoTarget == null) return;
+  function undoTaskFromCompleted(todoId /* HTMLELement */) {
+    const todoTarget = findTodo(todoId);
+    if (todoTarget == null) return;
 
-  todoTarget.isCompleted = false;
-  document.dispatchEvent(new Event(RENDER_EVENT));
-}
+    todoTarget.isCompleted = false;
+    document.dispatchEvent(new Event(RENDER_EVENT));
+    }
 
+    // baris kode pertama terload -------------------------- (1)
 document.addEventListener('DOMContentLoaded', function () {
   const submitForm /* HTMLFormElement */ = document.getElementById('form');
-
   submitForm.addEventListener('submit', function (event) {
     event.preventDefault();
     addTodo();
