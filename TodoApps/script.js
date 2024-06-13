@@ -89,6 +89,7 @@ function makeTodo(todoObject) {
   return container;
 }
 
+// fungsi addTodo yang dipanggil oleh baris kode ke-2
 function addTodo() {
   const textTodo = document.getElementById('title').value;
   const timestamp = document.getElementById('date').value;
