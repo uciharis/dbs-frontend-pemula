@@ -8,9 +8,10 @@
  *    }
  * ]
  */
-
 const todos = [];
 const RENDER_EVENT = 'render-todo';
+const SAVED_EVENT = 'saved-todo';
+const STORAGE_KEY = 'TODO_APPS';
 
 function generateId() {
   return +new Date();
@@ -26,7 +27,7 @@ function generateTodoObject(id, task, timestamp, isCompleted) {
 }
 
 function findTodo(todoId) {
-  for (todoItem of todos) {
+  for (const todoItem of todos) {
     if (todoItem.id === todoId) {
       return todoItem;
     }
@@ -35,13 +36,14 @@ function findTodo(todoId) {
 }
 
 function findTodoIndex(todoId) {
-  for (index in todos) {
+  for (const index in todos) {
     if (todos[index].id === todoId) {
       return index;
     }
   }
   return -1;
 }
+
 
 /**
  * Fungsi ini digunakan untuk memeriksa apakah localStorage didukung oleh browser atau tidak
@@ -85,8 +87,8 @@ function loadDataFromStorage() {
   document.dispatchEvent(new Event(RENDER_EVENT));
 }
 
-function makeTodo(todoObject) {
 
+function makeTodo(todoObject) {
   const {id, task, timestamp, isCompleted} = todoObject;
 
   const textTitle = document.createElement('h2');
@@ -105,7 +107,6 @@ function makeTodo(todoObject) {
   container.setAttribute('id', `todo-${id}`);
 
   if (isCompleted) {
-
     const undoButton = document.createElement('button');
     undoButton.classList.add('undo-button');
     undoButton.addEventListener('click', function () {
@@ -209,4 +210,4 @@ document.addEventListener(RENDER_EVENT, function () {
       uncompletedTODOList.append(todoElement);
     }
   }
-});
+})
