@@ -43,6 +43,7 @@ function findTodoIndex(todoId) {
   return -1;
 }
 
+// ------------------------------------- 3)
 function makeTodo(todoObject) {
   const {id, task, timestamp, isCompleted} = todoObject;
 
@@ -152,3 +153,6 @@ document.addEventListener(RENDER_EVENT, function () {
     }
   }
 });
+
+// aplikasi ini ketika direload, todo appnya akan hilang
+// maka perlu disimpan dg web storage
