@@ -23,7 +23,7 @@ if(typeof (Storage) !== 'undefined'){
 
 clearButton.addEventListener('click', function(){
     localStorage.removeItem(localStorageKey);
-    countDisplay.innerText= 'kontol';
+    countDisplay.innerText= 0;
 });
 }else {
     alert('browser tidak mendukung');
