@@ -21,7 +21,7 @@ if(typeof (Storage) !== 'undefined'){
         countDisplay.innerText=localStorage.getItem(localStorageKey);
     });
 
-clearButton.addEventListener('click', function(){
+    clearButton.addEventListener('click', function(){
     localStorage.removeItem(localStorageKey);
     countDisplay.innerText= 0;
 });
