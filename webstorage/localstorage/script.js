@@ -10,12 +10,11 @@ if(typeof (Storage) !== 'undefined'){
     let incrementButton = document.getElementById('incrementButton');
     let clearButton = document.getElementById('clear');
     let countDisplay = document.getElementById('count');
-    let count=0;
+    let count=localStorage.getItem(localStorageKey)|| 0;
 
     // nilai item dari local storage
     countDisplay.innerText = localStorage.getItem(localStorageKey);
-    console.log(countDisplay.innerText);
-    incrementButton.addEventListener('click', function(){
+        incrementButton.addEventListener('click', function(){
         count++;
         localStorage.setItem(localStorageKey,count)
         countDisplay.innerText=localStorage.getItem(localStorageKey);
