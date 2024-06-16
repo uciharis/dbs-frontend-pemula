@@ -14,7 +14,7 @@ if(typeof (Storage) !== 'undefined'){
 
     // nilai item dari local storage
     countDisplay.innerText = localStorage.getItem(localStorageKey);
-
+    console.log(countDisplay.innerText);
     incrementButton.addEventListener('click', function(){
         count++;
         localStorage.setItem(localStorageKey,count)
