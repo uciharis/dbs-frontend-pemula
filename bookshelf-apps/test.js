@@ -133,11 +133,17 @@ function makeTodo(todoObject) {
         const checkButton = document.createElement('button');
         checkButton.classList.add('check-button');
         checkButton.innerText = 'Complete';
+        const trashButton = document.createElement('button');
+        trashButton.classList.add('trash-button');
+        trashButton.innerText = 'Delete';
         checkButton.addEventListener('click', function () {
             addTaskToCompleted(id);
         });
+        trashButton.addEventListener('click', function () {
+            removeTaskFromCompleted(id);
+        });
 
-        container.append(checkButton);
+        container.append(checkButton,trashButton);
     }
 
     return container;
@@ -156,6 +162,7 @@ function addTodo() {
 
     document.dispatchEvent(new Event(RENDER_EVENT));
     saveData();
+
 }
 
 function addTaskToCompleted(todoId /* HTMLELement */) {
