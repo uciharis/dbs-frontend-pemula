@@ -1,4 +1,4 @@
-// validasi utk tahun peminjaman
+// validasi utk tahun buku
 // thn.1700 s.d 2024
 let inputBookYear = document.getElementById('inputBookYear');
 let errorMessage = document.getElementById('errorMessage');
@@ -13,4 +13,22 @@ inputBookYear.addEventListener('change',()=>{
 }
 console.log(inputBookYear.textContent)
 });
-// ---------------------------------------------------------------------------
+// initialize variabel2 bookshelf
+const incompleteBook = [];
+const RENDER_EVENT = 'render-masuk';
+const SAVED_EVENT = 'saved-masuk '
+
+
+
+// persiapan local storage :
+function isStorageExist(){
+    if (typeof(Storage)===undefined){
+        alert('browsermu tidak mendukung penyimpanan lokal bruh ..');
+        return false;
+    } return true;
+}
+
+//fungsi save data
+if (isStorageExist()){
+    const parsed = JSON.stringify(incompleteBook )
+}
