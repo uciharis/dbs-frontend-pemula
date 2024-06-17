@@ -22,13 +22,13 @@ function generateId() {
     return +new Date();
 }
 
-function generateTodoObject(id, title, author, year, isCompleted) {
+function generateTodoObject(id, title, author, year, isComplete) {
     return {
         id,
         title,
         author,
         year,
-        isCompleted
+        isComplete
     };
 }
 
@@ -93,7 +93,7 @@ function loadDataFromStorage() {
 }
 
 function makeTodo(todoObject) {
-    const { id, title, author, year, isCompleted } = todoObject;
+    const { id, title, author, year, isComplete } = todoObject;
 
     const textTitle = document.createElement('p');
     textTitle.innerText = title;
@@ -113,7 +113,7 @@ function makeTodo(todoObject) {
     container.append(textContainer);
     container.setAttribute('id', `todo-${id}`);
 
-    if (isCompleted) {
+    if (isComplete) {
         const undoButton = document.createElement('button');
         undoButton.classList.add('undo-button');
         undoButton.innerText = 'Undo';
@@ -147,10 +147,10 @@ function addTodo() {
     const inputTitle = document.getElementById('inputBookTitle').value;
     const inputAuthor = document.getElementById('inputBookAuthor').value;
     const year = document.getElementById('inputBookYear').value;
-    const isCompleted = document.getElementById('inputBookIsComplete').checked;
+    const isComplete = document.getElementById('inputBookIsComplete').checked;
 
     const generatedID = generateId();
-    const todoObject = generateTodoObject(generatedID, inputTitle, inputAuthor, year, isCompleted);
+    const todoObject = generateTodoObject(generatedID, inputTitle, inputAuthor, year, isComplete);
     todos.push(todoObject);
 
     document.dispatchEvent(new Event(RENDER_EVENT));
@@ -162,7 +162,7 @@ function addTaskToCompleted(todoId /* HTMLELement */) {
 
     if (todoTarget == null) return;
 
-    todoTarget.isCompleted = true;
+    todoTarget.isComplete = true;
     document.dispatchEvent(new Event(RENDER_EVENT));
     saveData();
 }
@@ -181,7 +181,7 @@ function undoTaskFromCompleted(todoId /* HTMLELement */) {
     const todoTarget = findTodo(todoId);
     if (todoTarget == null) return;
 
-    todoTarget.isCompleted = false;
+    todoTarget.isComplete = false;
     document.dispatchEvent(new Event(RENDER_EVENT));
     saveData();
 }
@@ -213,7 +213,7 @@ document.addEventListener(RENDER_EVENT, function () {
 
     for (const todoItem of todos) {
         const todoElement = makeTodo(todoItem);
-        if (todoItem.isCompleted) {
+        if (todoItem.isComplete) {
             listCompleted.append(todoElement);
         } else {
             uncompletedTODOList.append(todoElement);
