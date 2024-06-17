@@ -11,17 +11,28 @@ inputBookYear.addEventListener('change',()=>{
     } else{
         errorMessage.textContent=''
 }
-console.log(inputBookYear.textContent)
+//console.log(inputBookYear.textContent)
 });
 /**
  * [
- *    {
- *      id: <int>
- *      task: <string>
- *      timestamp: <string>
- *      isCompleted: <boolean>
- *    }
+ *   {
+  id: string | number,
+  title: string,
+  author: string,
+  year: number,
+  isComplete: boolean,
+}
  * ]
+
+contoh:
+{
+  id: 3657848524,
+  title: 'Harry Potter and the Philosopher\'s Stone',
+  author: 'J.K Rowling',
+  year: 1997,
+  isComplete: false,
+}
+
  */
 const todos = [];
 const RENDER_EVENT = 'render-todo';
@@ -32,10 +43,11 @@ function generateId() {
   return +new Date();
 }
 
-function generateTodoObject(id, task, timestamp, isCompleted) {
+function generateTodoObject(id, title,author, timestamp, isCompleted) {
   return {
     id,
-    task,
+    title,
+    author,
     timestamp,
     isCompleted
   }
