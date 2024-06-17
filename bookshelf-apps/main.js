@@ -116,17 +116,20 @@ function loadDataFromStorage() {
 
 
 function makeTodo(todoObject) {
-  const {id, task, timestamp, isCompleted} = todoObject;
+  const {id, title,author, timestamp, isCompleted} = todoObject;
 
   const textTitle = document.createElement('h2');
-  textTitle.innerText = task;
+  textTitle.innerText = title;
+
+  const textAuthor = document.createElement('h2');
+  textAuthor.innerText = author;
 
   const textTimestamp = document.createElement('p');
   textTimestamp.innerText = timestamp;
 
   const textContainer = document.createElement('div');
   textContainer.classList.add('inner');
-  textContainer.append(textTitle, textTimestamp);
+  textContainer.append(textTitle,textAuthor,textTimestamp);
 
   const container = document.createElement('div');
   container.classList.add('item', 'shadow')
@@ -162,8 +165,10 @@ function makeTodo(todoObject) {
 }
 
 function addTodo() {
-  const textTodo = document.getElementById('title').value;
-  const timestamp = document.getElementById('date').value;
+  const inputTitle = document.getElementById('inputBookTitle').value;
+  const inputAuthor = document.getElementById('inputBookAuthor').value;
+
+  const timestamp = document.getElementById('inputBookYear').value;
 
   const generatedID = generateId();
   const todoObject = generateTodoObject(generatedID, textTodo, timestamp, false);
