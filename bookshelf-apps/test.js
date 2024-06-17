@@ -146,7 +146,8 @@ function makeTodo(todoObject) {
 function addTodo() {
     const inputTitle = document.getElementById('inputBookTitle').value;
     const inputAuthor = document.getElementById('inputBookAuthor').value;
-    const year = document.getElementById('inputBookYear').value;
+    const year = parseInt(document.getElementById('inputBookYear').value);
+    console.log(year);
     const isComplete = document.getElementById('inputBookIsComplete').checked;
 
     const generatedID = generateId();
