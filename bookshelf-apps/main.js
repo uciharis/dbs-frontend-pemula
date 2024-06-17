@@ -210,7 +210,7 @@ function undoTaskFromCompleted(todoId /* HTMLELement */) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  const submitForm /* HTMLFormElement */ = document.getElementById('form');
+  const submitForm /* HTMLFormElement */ = document.getElementById('inputBook');
 
   submitForm.addEventListener('submit', function (event) {
     event.preventDefault();
